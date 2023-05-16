@@ -1,18 +1,17 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <windows.h>
 #include <tchar.h>
-#include <iostream>
 #include <stdio.h>
 
-using namespace std;
+#include "resource.h"
+#include "Character.h"
 
-#define caretHeight 16
-#define maxlenth 80
+using namespace std;
 
 HINSTANCE g_hInst;
 LPCWSTR lpszClass = L"WIndow Class Name";
 LPCWSTR lpszWindowName = L"포트리스";
 
+// WindowSize = 800 x 600
 UINT width = 800;
 UINT height = 600;
 
@@ -49,17 +48,37 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpszParam,
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 {
 	PAINTSTRUCT ps;
-	HDC hDC;
+	HDC hdc;
+
+	RECT clientRect;
+	GetClientRect(hWnd, &clientRect);
+
+	static Character obj;
 
 	switch (iMessage) {
 	case WM_CREATE:
+		// printf (로그) 뽑는 용
 		AllocConsole();
 		_tfreopen(_T("CONOUT$"), _T("w"), stdout);
 		_tfreopen(_T("CONIN$"), _T("r"), stdin);
 		_tfreopen(_T("CONERR$"), _T("w"), stderr);
+		SetTimer(hWnd, 1, 1000, NULL);
+		obj.setLoc({ clientRect.right / 2, clientRect.bottom / 2});
+		obj.init(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1), {10, 10});
+		break;
+	case WM_LBUTTONDOWN:
+		// 원하는 지점 클릭하면 좌표 나옴
+		POINT p;
+		p.x = LOWORD(lParam);
+		p.y = HIWORD(lParam);
+		cout << p.x << ", " << p.y << endl;
+		break;
+	case WM_TIMER:
+		InvalidateRect(hWnd, NULL, false);
 		break;
 	case WM_PAINT:
-		hDC = BeginPaint(hWnd, &ps);
+		hdc = BeginPaint(hWnd, &ps);
+		obj.draw(hdc);
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
