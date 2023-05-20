@@ -1,9 +1,8 @@
 #include "Object.h"
 
-void Object::init(HINSTANCE hins, LPCWSTR image, POINT size)
+void Object::init(HINSTANCE hins, LPCWSTR image)
 {
 	Bit = (HBITMAP)LoadBitmap(hins, image);
-	drawSize = size;
 }
 
 void Object::setResRect(RECT r)
@@ -14,6 +13,11 @@ void Object::setResRect(RECT r)
 void Object::setLoc(POINT p)
 {
 	center = p;
+}
+
+void Object::setSize(POINT size)
+{
+	drawSize = size;
 }
 
 void Object::draw(HDC hdc)

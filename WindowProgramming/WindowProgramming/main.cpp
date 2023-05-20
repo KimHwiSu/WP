@@ -64,7 +64,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		_tfreopen(_T("CONERR$"), _T("w"), stderr);
 		SetTimer(hWnd, 1, 1000, NULL);
 		obj.setLoc({ clientRect.right / 2, clientRect.bottom / 2});
-		obj.init(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1), {10, 10});
+		obj.init(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1));
 		break;
 	case WM_LBUTTONDOWN:
 		// 원하는 지점 클릭하면 좌표 나옴

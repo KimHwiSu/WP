@@ -8,9 +8,10 @@ using namespace std;
 
 class Object {
 public:
-	virtual void init(HINSTANCE hins, LPCWSTR image, POINT size);
+	virtual void init(HINSTANCE hins, LPCWSTR image);
 	void setResRect(RECT r);
 	void setLoc(POINT p);
+	void setSize(POINT size);
 	void draw(HDC hdc);
 	POINT getCenter();
 	void move(POINT m);
