@@ -4,7 +4,7 @@
 
 #include "resource.h"
 #include "Character.h"
-
+#include "ball.h"
 using namespace std;
 
 HINSTANCE g_hInst;
@@ -54,17 +54,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	GetClientRect(hWnd, &clientRect);
 
 	static Character obj;
-
 	switch (iMessage) {
 	case WM_CREATE:
+
 		// printf (로그) 뽑는 용
 		AllocConsole();
 		_tfreopen(_T("CONOUT$"), _T("w"), stdout);
 		_tfreopen(_T("CONIN$"), _T("r"), stdin);
 		_tfreopen(_T("CONERR$"), _T("w"), stderr);
 		SetTimer(hWnd, 1, 1000, NULL);
-		obj.setLoc({ clientRect.right / 2, clientRect.bottom / 2});
-		obj.init(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1));
 		break;
 	case WM_LBUTTONDOWN:
 		// 원하는 지점 클릭하면 좌표 나옴
@@ -74,7 +72,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		cout << p.x << ", " << p.y << endl;
 		break;
 	case WM_TIMER:
-		InvalidateRect(hWnd, NULL, false);
+
+		InvalidateRect(hWnd, NULL, FALSE);
 		break;
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
