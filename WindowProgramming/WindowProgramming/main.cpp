@@ -50,8 +50,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	bullet bullet;
 	PAINTSTRUCT ps;
 	HDC hdc;
+	static TCHAR str[100];
 	static int store_angle;
-	static int power;
+	static int power_x,power_y;
 	static float bullet_x, bullet_y;
 	static int angle;
 	static int plus;
@@ -59,21 +60,25 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	static float aim_x,aim_y;
 	static int time;
 	static int act;
+	static int random;
+	static int windpower;
 	RECT clientRect;
 	GetClientRect(hWnd, &clientRect);
 
 	static Character obj;
 	switch (iMessage) {
 	case WM_CREATE:
+		random = rand() % 9; //바람 방향 9가지 8방향 + 정지 
 		a = 0;
 		plus = 0;
 		act = 0;
 		time = 0;
 		angle = 0;
 		bullet_x = 40;
-		bullet_y = 200;
-		aim_x = bullet.anlgepoint_x_up(angle);
-		aim_y = bullet.anlgepoint_y_up(angle);
+		bullet_y = 500;
+		windpower = rand() % 50;
+		aim_x = bullet.anlgepoint_x(angle);
+		aim_y = bullet.anlgepoint_y(angle);
 
 		// printf (로그) 뽑는 용
 		break;
@@ -89,15 +94,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		{
 		case VK_UP:
 			if (act == 0) {
-				aim_x = bullet.anlgepoint_x_up(angle--);
-				aim_y = bullet.anlgepoint_y_up(angle);
+				aim_x = bullet.anlgepoint_x(angle--);
+				aim_y = bullet.anlgepoint_y(angle);
 
 			}
 			break;
 		case VK_DOWN:
 			if (act == 0) {
-				aim_x = bullet.anlgepoint_x_down(angle++);
-				aim_y = bullet.anlgepoint_y_down(angle);
+				aim_x = bullet.anlgepoint_x(angle++);
+				aim_y = bullet.anlgepoint_y(angle);
 			}
 			break;
 			//위아래키로 에임 조정
@@ -146,12 +151,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		case 1:
 			if (act == 1) {
 				if (plus == 0) {
-					aim_x = bullet.anlgepoint_x_up(angle--);
-					aim_y = bullet.anlgepoint_y_up(angle);
+					aim_x = bullet.anlgepoint_x(angle--);
+					aim_y = bullet.anlgepoint_y(angle);
 				}
 				 if(plus == 1) {
-					aim_x = bullet.anlgepoint_x_up(angle++);
-					aim_y = bullet.anlgepoint_y_up(angle);
+					aim_x = bullet.anlgepoint_x(angle++);
+					aim_y = bullet.anlgepoint_y(angle);
 				}
 				if (angle < store_angle - 30 && plus == 0) {
 					plus = 1;
@@ -162,21 +167,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 			}//에임 위아래 이동
 			if (act == 2) {
 				
-			if(plus == 0)power += 20;
-			if (plus == 1)power -= 20;
-			if (power == 300)plus = 1;
-			if (power == 0)plus = 0;
+				if (plus == 0) { power_x += 20; power_y += 20; }
+			if (plus == 1) { power_x -= 20; power_y -= 20; }
+			if (power_x == 300)plus = 1;
+			if (power_x == 0)plus = 0;
 			} //힘조절
 			if (act == 3) {
 				time++;
-				bullet_x = bullet.bullet_xmove(bullet_x, angle, power, time);
-				bullet_y = bullet.bullet_ymove(bullet_y, angle, power, time);
-				if (bullet_y > 600) {
+				power_x = bullet.windpower_x(power_x, random, windpower);
+				power_y = bullet.windpower_y(power_y, random, windpower);
+				bullet_x = bullet.bullet_xmove(bullet_x, angle, power_x, time);
+				bullet_y = bullet.bullet_ymove(bullet_y, angle, power_y, time);
+				if (bullet_y > 600||bullet_x>800) {
+					power_x = 0;
+					power_y = 0;
 					time = 0;
 					bullet_x = 20;
-					bullet_y = 200;
+					bullet_y = 500;
 					act = 0;
 					plus = 0;
+					windpower = rand() % 10;
+					random = rand() % 9;
 				}
 			}//총알 궤적
 			break;
@@ -191,8 +202,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		MoveToEx(hdc, bullet_x+20, bullet_y+10, NULL);
 		LineTo(hdc, bullet_x + 20 * aim_x + 20, 20 * aim_y + bullet_y + 10);
 		MoveToEx(hdc, bullet_x -10, bullet_y + 20, NULL);
-		LineTo(hdc, bullet_x -10, -power + bullet_y );
+		LineTo(hdc, bullet_x -10, -power_x + bullet_y );
 		Ellipse(hdc, bullet_x, bullet_y, bullet_x + 20, bullet_y + 20);
+		wsprintf(str, L"%dm/s", windpower);
+		TextOut(hdc, 500, 500, str, lstrlen(str));
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:
