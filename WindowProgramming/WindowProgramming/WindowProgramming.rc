@@ -50,7 +50,83 @@ END
 // Bitmap
 //
 
-//IDB_BITMAP1             BITMAP                  "C:\\Users\\82104\\Desktop\\WPP\\WP\\bmps\\Player1_sheet.bmp"
+IDB_BITMAP2             BITMAP                  "C:\\Users\\ljk86\\Desktop\\bullet.bmp"
+
+IDB_BITMAP3             BITMAP                  "C:\\Users\\ljk86\\Desktop\\Game Boy GBC - Mario Golf - 3d View Background.bmp"
+
+IDB_BITMAP4             BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind.bmp"
+
+IDB_BITMAP5             BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_mask.bmp"
+
+IDB_BITMAP6             BITMAP                  "C:\\Users\\ljk86\\Desktop\\HP.bmp"
+
+IDB_BITMAP7             BITMAP                  "C:\\Users\\ljk86\\Desktop\\HP_red.bmp"
+
+IDB_BITMAP8             BITMAP                  "C:\\Users\\ljk86\\Desktop\\HP_blue.bmp"
+
+IDB_BITMAP9             BITMAP                  "C:\\Users\\ljk86\\Desktop\\HP_gray.bmp"
+
+IDB_BITMAP10            BITMAP                  "C:\\Users\\ljk86\\Desktop\\power.bmp"
+
+IDB_BITMAP11            BITMAP                  "C:\\Users\\ljk86\\Desktop\\power_m.bmp"
+
+IDB_BITMAP12            BITMAP                  "C:\\Users\\ljk86\\Desktop\\bullet_mask.bmp"
+
+IDB_BITMAP13            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_right_down.bmp"
+
+IDB_BITMAP14            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_right_down_mask.bmp"
+
+IDB_BITMAP15            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_down.bmp"
+
+IDB_BITMAP16            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_down_mask.bmp"
+
+IDB_BITMAP17            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left_down.bmp"
+
+IDB_BITMAP18            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left_down_mask.bmp"
+
+IDB_BITMAP19            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left.bmp"
+
+IDB_BITMAP20            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left_mask.bmp"
+
+IDB_BITMAP21            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left_up.bmp"
+
+IDB_BITMAP22            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_left_up_mask.bmp"
+
+IDB_BITMAP23            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_up.bmp"
+
+IDB_BITMAP24            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_up_mask.bmp"
+
+IDB_BITMAP25            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_right_up.bmp"
+
+IDB_BITMAP26            BITMAP                  "C:\\Users\\ljk86\\Desktop\\wind_right_up_mask.bmp"
+
+IDB_BITMAP27            BITMAP                  "C:\\Users\\ljk86\\Desktop\\main_font.bmp"
+
+IDB_BITMAP28            BITMAP                  "C:\\Users\\ljk86\\Desktop\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm Brown.bmp"
+
+IDB_BITMAP29            BITMAP                  "C:\\Users\\ljk86\\Desktop\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm.bmp"
+
+IDB_BITMAP30            BITMAP                  "C:\\Users\\ljk86\\Desktop\\player_mask.bmp"
+
+IDB_BITMAP31            BITMAP                  "C:\\Users\\ljk86\\Desktop\\Game Boy GBC - Mario Golf - 3d View Background2.bmp"
+
+IDB_BITMAP32            BITMAP                  "C:\\Users\\ljk86\\Desktop\\v.bmp"
+
+IDB_BITMAP33            BITMAP                  "C:\\Users\\ljk86\\Desktop\\s.bmp"
+
+IDB_BITMAP34            BITMAP                  "C:\\Users\\ljk86\\Desktop\\v_mask.bmp"
+
+IDB_BITMAP35            BITMAP                  "C:\\Users\\ljk86\\Desktop\\s_mask.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG1                PNG                     "C:\\Users\\ljk86\\Desktop\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm Brown.png"
+
+IDB_PNG2                PNG                     "C:\\Users\\ljk86\\Desktop\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm.png"
 
 #endif    // 한국어(대한민국) resources
 /////////////////////////////////////////////////////////////////////////////

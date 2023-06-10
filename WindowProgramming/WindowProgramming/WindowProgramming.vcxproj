@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ball.h" />
+    <ClInclude Include="bitmap.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="resource.h" />
@@ -153,6 +154,42 @@
     <ResourceCompile Include="WindowProgramming.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm Brown.bmp" />
+    <Image Include="..\..\..\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm Brown.png" />
+    <Image Include="..\..\..\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm.bmp" />
+    <Image Include="..\..\..\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm.png" />
+    <Image Include="..\..\..\bullet.bmp" />
+    <Image Include="..\..\..\bullet_mask.bmp" />
+    <Image Include="..\..\..\Game Boy GBC - Mario Golf - 3d View Background.bmp" />
+    <Image Include="..\..\..\Game Boy GBC - Mario Golf - 3d View Background2.bmp" />
+    <Image Include="..\..\..\HP.bmp" />
+    <Image Include="..\..\..\HP_blue.bmp" />
+    <Image Include="..\..\..\HP_gray.bmp" />
+    <Image Include="..\..\..\HP_red.bmp" />
+    <Image Include="..\..\..\main_font.bmp" />
+    <Image Include="..\..\..\player_mask.bmp" />
+    <Image Include="..\..\..\power.bmp" />
+    <Image Include="..\..\..\power_m.bmp" />
+    <Image Include="..\..\..\s.bmp" />
+    <Image Include="..\..\..\s_mask.bmp" />
+    <Image Include="..\..\..\v.bmp" />
+    <Image Include="..\..\..\v_mask.bmp" />
+    <Image Include="..\..\..\wind.bmp" />
+    <Image Include="..\..\..\wind_down.bmp" />
+    <Image Include="..\..\..\wind_down_mask.bmp" />
+    <Image Include="..\..\..\wind_left.bmp" />
+    <Image Include="..\..\..\wind_left_down.bmp" />
+    <Image Include="..\..\..\wind_left_down_mask.bmp" />
+    <Image Include="..\..\..\wind_left_mask.bmp" />
+    <Image Include="..\..\..\wind_left_up.bmp" />
+    <Image Include="..\..\..\wind_left_up_mask.bmp" />
+    <Image Include="..\..\..\wind_mask.bmp" />
+    <Image Include="..\..\..\wind_right_down.bmp" />
+    <Image Include="..\..\..\wind_right_down_mask.bmp" />
+    <Image Include="..\..\..\wind_right_up.bmp" />
+    <Image Include="..\..\..\wind_right_up_mask.bmp" />
+    <Image Include="..\..\..\wind_up.bmp" />
+    <Image Include="..\..\..\wind_up_mask.bmp" />
     <Image Include="..\..\bmps\Player1_sheet.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

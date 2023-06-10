@@ -1,20 +1,23 @@
 ﻿  main.cpp
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(21,16): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(22,10): warning C4244: 'return': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(25,16): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(26,10): warning C4244: 'return': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(31,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(35,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(202,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(202,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(203,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(203,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(204,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(204,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(205,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(205,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(206,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(206,45): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(206,26): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(206,16): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(70,18): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(74,20): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(78,18): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(84,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\ball.h(88,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(370,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(370,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(372,47): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(372,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(375,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(375,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(377,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(377,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(381,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(381,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(383,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(383,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   WindowProgramming.vcxproj -> C:\Users\ljk86\Desktop\WP\WindowProgramming\Debug\WindowProgramming.exe
