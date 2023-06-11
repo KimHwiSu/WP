@@ -135,6 +135,9 @@ float Character::getMP()
 void Character::damageHP(int i)
 {
 	HP -= i;
+	if (HP < 0) {
+		HP = 0;
+	}
 }
 
 void Character::setMP(int i)

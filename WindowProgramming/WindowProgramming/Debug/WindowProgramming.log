@@ -4,28 +4,28 @@ C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(97,20
 C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(101,18): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(107,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(111,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(34,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(326,21): warning C4244: '초기화 중': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(332,31): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(391,58): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(391,39): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(394,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(394,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(399,58): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(399,39): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(402,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(402,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(406,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(422,33): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(85,18): warning C4101: 'memdcimage' :참조되지 않은 지역 변수입니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(85,11): warning C4101: 'memdc' :참조되지 않은 지역 변수입니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(516,69): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(516,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(520,69): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(520,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(539,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(541,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(550,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(552,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(680,19): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(35,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(330,21): warning C4244: '초기화 중': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(335,31): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(394,58): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(394,39): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(397,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(397,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(402,58): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(402,39): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(405,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(405,31): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(409,50): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(425,33): warning C4244: '=': 'ULONGLONG'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(86,18): warning C4101: 'memdcimage' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(86,11): warning C4101: 'memdc' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(523,69): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(523,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(527,69): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(527,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(546,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(548,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(557,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(559,60): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(717,19): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   WindowProgramming.vcxproj -> C:\Users\82104\Desktop\WPP\WP\WindowProgramming\Debug\WindowProgramming.exe

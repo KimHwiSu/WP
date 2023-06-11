@@ -12,7 +12,7 @@
 //#define visibleCollision
 
 #define MPdamage 5
-#define HPDamage 20
+#define HPDamage 105
 using namespace std;
 
 HINSTANCE g_hInst;
@@ -26,6 +26,7 @@ UINT height = 600;
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam);
 void DrawAll(HDC hdc, RECT clientRect);
 void DrawTitle(HDC hdc, RECT clientRect);
+void DrawEnd(HDC hdc, RECT clientRect);
 void changeTurn();
 void setBulletLoc();
 void checkCol();
@@ -74,9 +75,9 @@ float aim_x, aim_y;
 int power_x, power_y;
 int act;
 bool drawLine{};
-
+bool gameOver{};
 DWORD startTime; // 시작 시간
-
+bool drawCol{  };
 DWORD elapsedTime = 0; // 경과 시간 (단위: 밀리초)
 DWORD timeLimit = 10000; // 제한 시간 (단위: 밀리초, 여기서는 10초)
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
@@ -101,10 +102,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	switch (iMessage) {
 	case WM_CREATE:
 		// printf (로그) 뽑는 용
-		AllocConsole();
+		/*AllocConsole();
 		_tfreopen(_T("CONOUT$"), _T("w"), stdout);
 		_tfreopen(_T("CONIN$"), _T("r"), stdin);
-		_tfreopen(_T("CONERR$"), _T("w"), stderr);
+		_tfreopen(_T("CONERR$"), _T("w"), stderr);*/
 		SetTimer(hWnd, 1, 100, NULL);
 		hBitBackground = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP3));
 		hBitBackground2 = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP31));
@@ -193,6 +194,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 				else {
 					obj1.useItem();
 				}
+				break;
+			case 'Q':
+				drawCol = !drawCol;
 				break;
 			case VK_LEFT:
 				if (obj.getTurn()) {
@@ -328,7 +332,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		// 제한 시간 체크
 		if (act != 3) {
 			if (elapsedTime >= timeLimit) {
-				std::cout << "Time's up! Resetting time limit..." << std::endl;
 				startTime = GetTickCount64(); // 시작 시간 재설정
 				angle = 0;
 				power_x = 0;
@@ -435,6 +438,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		}
 		else {
 			DrawAll(hdc, clientRect);
+			if (gameOver) {
+				KillTimer(hWnd, 1);
+				DrawEnd(hdc, clientRect);
+			}
 		}
 		EndPaint(hWnd, &ps);
 		break;
@@ -461,17 +468,17 @@ void DrawAll(HDC hdc, RECT clientRect)
 	obj.draw(memdc);
 	obj1.draw(memdc);
 
-#ifdef visibleCollision
-	for (Block b : block) {
-		b.drawCol(memdc, clientRect);
+	if (drawCol) {
+		for (Block b : block) {
+			b.drawCol(memdc, clientRect);
+		}
+		obj.drawCol(memdc, clientRect);
+		obj1.drawCol(memdc, clientRect);
+		bullet.drawCol(memdc, clientRect);
+		for (Item& i : item) {
+			i.drawCol(memdc, clientRect);
+		}
 	}
-	obj.drawCol(memdc, clientRect);
-	obj1.drawCol(memdc, clientRect);
-	bullet.drawCol(memdc, clientRect);
-	for (Item& i : item) {
-		i.drawCol(memdc, clientRect);
-	}
-#endif // visibleCollision
 	HFONT hFont = CreateFont(40, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
 		CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, _T("Impact"));  // 폰트 생성
 	SelectObject(memdc, hFont);
@@ -560,6 +567,30 @@ void DrawAll(HDC hdc, RECT clientRect)
 	DeleteObject(hb);
 }
 
+void DrawEnd(HDC hdc, RECT clientRect) {
+	HDC memdc = CreateCompatibleDC(hdc);
+	HBITMAP hb = CreateCompatibleBitmap(hdc, clientRect.right, clientRect.bottom);
+	SelectObject(memdc, hb);
+
+	HFONT hFont = CreateFont(40, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS,
+		CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE, _T("Impact"));  // 폰트 생성
+	SelectObject(memdc, hFont);
+	TCHAR text[] = L"Player";
+	TCHAR newText[20];
+	if (obj.getTurn()) {
+		swprintf_s(newText, L"%s 1 Win", text);
+	}
+	else if (obj1.getTurn()) {
+		swprintf_s(newText, L"%s 2 Win", text);
+	}
+	SetTextColor(memdc, RGB(1, 1, 1));
+	TextOut(memdc, clientRect.right / 2 - 100, clientRect.bottom / 2 - 50, newText, lstrlen(newText));
+
+	TransparentBlt(hdc, 0, 0, clientRect.right, clientRect.bottom, memdc, 0, 0, clientRect.right, clientRect.bottom, RGB(0, 0, 0));
+	DeleteObject(hFont);
+	DeleteObject(memdc);
+	DeleteObject(hb);
+}
 void DrawTitle(HDC hdc, RECT clientRect)
 {
 	HDC memdc = CreateCompatibleDC(hdc);
@@ -660,6 +691,9 @@ void checkCol()
 		// 충돌함
 		bullet.setDraw(false);
 		obj.damageHP(HPDamage);
+		if (obj.getHP() <= 0) {
+			gameOver = true;
+		}
 	}
 	rectB = obj1.getColRect();
 	if (rectA.right <= rectB.left || rectA.left >= rectB.right ||
@@ -670,6 +704,9 @@ void checkCol()
 		// 충돌함
 		bullet.setDraw(false);
 		obj1.damageHP(HPDamage);
+		if (obj1.getHP() <= 0) {
+			gameOver = true;
+		}
 	}
 }
 
