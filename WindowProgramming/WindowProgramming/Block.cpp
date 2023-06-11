@@ -2,7 +2,7 @@
 
 void Block::init(HINSTANCE hins, LPCWSTR image)
 {
-	Object::init(hins, image);
+	Object::init(hins, image, RGB(255,255,255));
 	setResRect(IdleRect);
 	setSize(IdleSize);
 	POINT p = getCenter();

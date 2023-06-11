@@ -3,7 +3,7 @@
 
 class Block : public Object {
 public:
-	void init(HINSTANCE hins, LPCWSTR image) override;
+	void init(HINSTANCE hins, LPCWSTR image);
 	void destroy(RECT r);
 private:
 	RECT IdleRect = { 0, 736, 128, 32 };

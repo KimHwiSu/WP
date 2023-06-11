@@ -2,7 +2,7 @@
 
 void Character::init(HINSTANCE hins, LPCWSTR image)
 {
-	Object::init(hins, image);
+	Object::init(hins, image, RGB(255, 255, 255));
 	hi = hins;
 	im = image;
 	setResRect(IdleRect);
@@ -15,7 +15,7 @@ void Character::init(HINSTANCE hins, LPCWSTR image)
 
 void Character::update(vector<RECT> cols)
 {
-	Object::init(hi, im);
+	Object::init(hi, im, RGB(255, 255, 255));
 	if (!getCol()) {
 		moveC({ 0, 10 });
 		for (const RECT c : cols) {
@@ -120,4 +120,53 @@ void Character::moveC(POINT s)
 	POINT p = getCenter();
 	RECT ColR{ p.x - 13, p.y + 3, p.x + 13, p.y + 33 };
 	colPoint = { p.x, ColR.bottom };
+}
+
+float Character::getHP()
+{
+	return HP;
+}
+
+float Character::getMP()
+{
+	return MP;
+}
+
+void Character::damageHP(int i)
+{
+	HP -= i;
+}
+
+void Character::setMP(int i)
+{
+	MP = i;
+}
+
+void Character::damageMP(int i)
+{
+	MP -= i;
+}
+
+void Character::addItem()
+{
+	item += 1;
+}
+
+void Character::useItem()
+{
+	if (item > 0) {
+		item--;
+		HP += 50;
+		if (HP > 200) {
+			HP = 200;
+		}
+	}
+	else {
+		cout << "Not enough" << endl;
+	}
+}
+
+int Character::getItem()
+{
+	return item;
 }

@@ -10,7 +10,7 @@ using namespace std;
 
 class Object {
 public:
-	virtual void init(HINSTANCE hins, LPCWSTR image);
+	virtual void init(HINSTANCE hins, LPCWSTR image, COLORREF co);
 	void setResRect(RECT r);
 	void setLoc(POINT p);
 	void setSize(POINT size);
@@ -34,4 +34,5 @@ private:
 	POINT drawSize;
 	RECT colRect{};
 	bool col{};
+	COLORREF color{};
 };

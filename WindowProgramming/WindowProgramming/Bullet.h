@@ -5,10 +5,33 @@
 
 class Bullet: public Object
 {
-
 public:
+
+	void init(HINSTANCE hins, LPCWSTR image, POINT loc, int size) {
+		Object::init(hins, image, RGB(0, 0, 0));
+		setResRect({0, 0, 40, 20});
+		setSize({size+10, size});
+		setLoc({ loc.x, loc.y  });
+		hi = hins;
+		im = image;
+	}
+	void setCol() {
+			POINT p = getCenter();
+			RECT r{};
+		if (getDirChange()) {
+			r = {p.x -18, p.y - 10, p.x- 5, p.y+10};
+		}
+		else {
+			r = { p.x + 5, p.y - 10, p.x + 18, p.y + 10 };
+		}
+		setColRect(r);
+	}
 	int font(int random) {
 		return random * 64;
+	}
+	void update() {
+		Object::init(hi, im, RGB(0,0,0));
+		setCol();
 	}
 	void windbitmap(HINSTANCE g_hInst,HBITMAP* wind, HBITMAP* wind_mask, int random) {
 		if (random == 1) {
@@ -89,12 +112,14 @@ public:
 	}
 
 	bool getDraw() {
-		return draw;
+		return isdraw;
 	}
 	void setDraw(bool is) {
-		draw = is;
+		isdraw = is;
 	}
 private:
-	bool draw{};
+	bool isdraw{};
 	int a = 0;
+	HINSTANCE hi;
+	LPCWSTR im;
 };

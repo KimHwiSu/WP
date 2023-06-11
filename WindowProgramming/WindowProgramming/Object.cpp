@@ -1,8 +1,9 @@
 #include "Object.h"
 
-void Object::init(HINSTANCE hins, LPCWSTR image)
+void Object::init(HINSTANCE hins, LPCWSTR image, COLORREF co)
 {
 	Bit = (HBITMAP)LoadBitmap(hins, image);
+	color = co;
 }
 
 void Object::setResRect(RECT r)
@@ -33,7 +34,7 @@ void Object::draw(HDC hdc)
 	if (dirChange) {
 		StretchBlt(memdc, drawRect.left, drawRect.top, drawRect.right, drawRect.bottom, memdc, drawRect.left + drawRect.right, drawRect.top, -drawRect.right, drawRect.bottom, SRCCOPY);
 	}
-	TransparentBlt(hdc, dstR.left, dstR.top, dstR.right, dstR.bottom, memdc, drawRect.left, drawRect.top, drawRect.right, drawRect.bottom, RGB(255, 255, 255));
+	TransparentBlt(hdc, dstR.left, dstR.top, dstR.right, dstR.bottom, memdc, drawRect.left, drawRect.top, drawRect.right, drawRect.bottom, color);
 	DeleteObject(memdc);
 }
 
