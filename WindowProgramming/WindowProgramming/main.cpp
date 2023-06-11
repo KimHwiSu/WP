@@ -396,13 +396,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		memdcimage = CreateCompatibleDC(memdc); //--- 이미지를 저장 할 메모리 DC 생성
 		oldbitmap[0] = (HBITMAP)SelectObject(memdc, hbit);
 
-		StretchBlt(hdc, 0, 0, 800, 600, memdc, 0, 0, 800, 600, SRCCOPY); // HP
+		StretchBlt(hdc, 0, 0, 800, 600, memdc, 0, 0, 800, 600, SRCCOPY);
 
 		SelectObject(memdc, oldbitmap[0]);
 
 		obj.draw(hdc);
-		MoveToEx(hdc, bullet_x+20, bullet_y+10, NULL);
-		LineTo(hdc, bullet_x + 20 * aim_x + 20, 20 * aim_y + bullet_y + 10);
+			MoveToEx(hdc, bullet_x + 20, bullet_y + 10, NULL);
+			LineTo(hdc, bullet_x + 20 * aim_x + 20, 20 * aim_y + bullet_y + 10);
 		
 		EndPaint(hWnd, &ps);
 		break;

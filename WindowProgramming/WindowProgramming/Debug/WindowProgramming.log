@@ -16,8 +16,8 @@ C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(381,34): 
 C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(381,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(383,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(383,24): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,25): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,65): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,37): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,42): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(404,27): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,66): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\ljk86\Desktop\WP\WindowProgramming\WindowProgramming\main.cpp(405,38): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   WindowProgramming.vcxproj -> C:\Users\ljk86\Desktop\WP\WindowProgramming\Debug\WindowProgramming.exe
