@@ -24,6 +24,12 @@
     <ClCompile Include="Character.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h">
@@ -35,6 +41,15 @@
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowProgramming.rc">
@@ -43,6 +58,36 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\bmps\Player1_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Back_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Bullet_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\HP_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Item_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\MoveItem_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Number_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Player2_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\PowerGauge_sheet.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Platform.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\..\bmps\Platform_sheet.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

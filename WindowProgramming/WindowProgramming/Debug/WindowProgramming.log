@@ -1,4 +1,10 @@
-﻿  Character.cpp
-  main.cpp
-  코드를 생성하고 있습니다...
+﻿  main.cpp
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(70,18): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(74,20): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(78,18): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(84,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\Bullet.h(88,13): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(28,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(70,18): warning C4101: 'memdcimage' :참조되지 않은 지역 변수입니다.
+C:\Users\82104\Desktop\WPP\WP\WindowProgramming\WindowProgramming\main.cpp(70,11): warning C4101: 'memdc' :참조되지 않은 지역 변수입니다.
   WindowProgramming.vcxproj -> C:\Users\82104\Desktop\WPP\WP\WindowProgramming\Debug\WindowProgramming.exe

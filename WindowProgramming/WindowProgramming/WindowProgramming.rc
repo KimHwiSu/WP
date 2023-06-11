@@ -50,7 +50,95 @@ END
 // Bitmap
 //
 
-IDB_BITMAP1             BITMAP                  "C:\\Users\\82104\\Desktop\\WPP\\WP\\bmps\\Player1_sheet.bmp"
+IDB_BITMAP2             BITMAP                  "bmps\\bullet.bmp"
+
+IDB_BITMAP3             BITMAP                  "bmps\\Game Boy GBC - Mario Golf - 3d View Background.bmp"
+
+IDB_BITMAP4             BITMAP                  "bmps\\wind.bmp"
+
+IDB_BITMAP5             BITMAP                  "bmps\\wind_mask.bmp"
+
+IDB_BITMAP6             BITMAP                  "bmps\\HP.bmp"
+
+IDB_BITMAP7             BITMAP                  "bmps\\HP_red.bmp"
+
+IDB_BITMAP8             BITMAP                  "bmps\\HP_blue.bmp"
+
+IDB_BITMAP9             BITMAP                  "bmps\\HP_gray.bmp"
+
+IDB_BITMAP10            BITMAP                  "bmps\\power.bmp"
+
+IDB_BITMAP11            BITMAP                  "bmps\\power_m.bmp"
+
+IDB_BITMAP12            BITMAP                  "bmps\\bullet_mask.bmp"
+
+IDB_BITMAP13            BITMAP                  "bmps\\wind_right_down.bmp"
+
+IDB_BITMAP14            BITMAP                  "bmps\\wind_right_down_mask.bmp"
+
+IDB_BITMAP15            BITMAP                  "bmps\\wind_down.bmp"
+
+IDB_BITMAP16            BITMAP                  "bmps\\wind_down_mask.bmp"
+
+IDB_BITMAP17            BITMAP                  "bmps\\wind_left_down.bmp"
+
+IDB_BITMAP18            BITMAP                  "bmps\\wind_left_down_mask.bmp"
+
+IDB_BITMAP19            BITMAP                  "bmps\\wind_left.bmp"
+
+IDB_BITMAP20            BITMAP                  "bmps\\wind_left_mask.bmp"
+
+IDB_BITMAP21            BITMAP                  "bmps\\wind_left_up.bmp"
+
+IDB_BITMAP22            BITMAP                  "bmps\\wind_left_up_mask.bmp"
+
+IDB_BITMAP23            BITMAP                  "bmps\\wind_up.bmp"
+
+IDB_BITMAP24            BITMAP                  "bmps\\wind_up_mask.bmp"
+
+IDB_BITMAP25            BITMAP                  "bmps\\wind_right_up.bmp"
+
+IDB_BITMAP26            BITMAP                  "bmps\\wind_right_up_mask.bmp"
+
+IDB_BITMAP27            BITMAP                  "bmps\\main_font.bmp"
+
+IDB_BITMAP28            BITMAP                  "bmps\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm Brown.bmp"
+
+IDB_BITMAP29            BITMAP                  "bmps\\3DS - Adventure Time Hey Ice King Whyd You Steal Our Garbage - Hypno Worm.bmp"
+
+IDB_BITMAP30            BITMAP                  "bmps\\player_mask.bmp"
+
+IDB_BITMAP31            BITMAP                  "bmps\\Game Boy GBC - Mario Golf - 3d View Background2.bmp"
+
+IDB_BITMAP32            BITMAP                  "bmps\\v.bmp"
+
+IDB_BITMAP33            BITMAP                  "bmps\\s.bmp"
+
+IDB_BITMAP34            BITMAP                  "bmps\\v_mask.bmp"
+
+IDB_BITMAP35            BITMAP                  "bmps\\s_mask.bmp"
+
+IDB_BITMAP36             BITMAP                  "bmps\\Player1_sheet.bmp"
+
+IDB_BITMAP37             BITMAP                  "bmps\\Back_sheet.bmp"
+
+IDB_BITMAP38            BITMAP                  "bmps\\Bullet_sheet.bmp"
+
+IDB_BITMAP39            BITMAP                  "bmps\\HP_sheet.bmp"
+
+IDB_BITMAP40            BITMAP                  "bmps\\Item_sheet.bmp"
+
+IDB_BITMAP41            BITMAP                  "bmps\\MoveItem_sheet.bmp"
+
+IDB_BITMAP42            BITMAP                  "bmps\\Number_sheet.bmp"
+
+IDB_BITMAP43            BITMAP                  "bmps\\Player2_sheet.bmp"
+
+IDB_BITMAP44            BITMAP                  "bmps\\PowerGauge_sheet.bmp"
+
+IDB_BITMAP45            BITMAP                  "bmps\\Platform_sheet.bmp"
+
+IDB_BITMAP46            BITMAP                  "bmps\\Title_Message.bmp"
 
 #endif    // 한국어(대한민국) resources
 /////////////////////////////////////////////////////////////////////////////

@@ -139,11 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BackGround.cpp" />
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BackGround.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="resource.h" />
@@ -152,7 +157,17 @@
     <ResourceCompile Include="WindowProgramming.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\bmps\Back_sheet.bmp" />
+    <Image Include="..\..\bmps\Bullet_sheet.bmp" />
+    <Image Include="..\..\bmps\HP_sheet.bmp" />
+    <Image Include="..\..\bmps\Item_sheet.bmp" />
+    <Image Include="..\..\bmps\MoveItem_sheet.bmp" />
+    <Image Include="..\..\bmps\Number_sheet.bmp" />
+    <Image Include="..\..\bmps\Platform.png" />
+    <Image Include="..\..\bmps\Platform_sheet.bmp" />
     <Image Include="..\..\bmps\Player1_sheet.bmp" />
+    <Image Include="..\..\bmps\Player2_sheet.bmp" />
+    <Image Include="..\..\bmps\PowerGauge_sheet.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
