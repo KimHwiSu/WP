@@ -1,4 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
+#define debug
+//#define visibleCollision
 #include <tchar.h>
 #include <stdio.h>
 
@@ -8,9 +10,23 @@
 #include "Block.h"
 #include "Bullet.h"
 #include "Item.h"
+#include "Ui.h"
 
-//#define visibleCollision
 
+// todo
+// 1. divide
+// - set bitmap
+// - framework
+// - variable
+// 2. improvement
+// - move animation
+// - previous key do not recognize
+// - bmp bkgColor (white) clear
+// - map expand
+// - Item expand
+
+// 1. make Class Stage, and cascase objs
+ 
 #define MPdamage 5
 #define HPDamage 105
 using namespace std;
@@ -31,6 +47,7 @@ void changeTurn();
 void setBulletLoc();
 void checkCol();
 void checkItemCol();
+void setImgs();
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpszParam, int nCmdShow) {
 	srand(time(0));
 	HWND hWnd;
@@ -71,6 +88,10 @@ HBITMAP titleMessage, hBitBackground, hBitBackground2, oldbitmap[4], windbitmap[
 vector<Item> item;
 Bullet bullet;
 
+
+Ui stage1;
+// ui list : wind, hp Max, mp Max, left hp, left mp, charge gage, font(for timer) 
+
 float aim_x, aim_y;
 int power_x, power_y;
 int act;
@@ -101,11 +122,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 
 	switch (iMessage) {
 	case WM_CREATE:
-		// printf (·Î±×) »Ì´Â ¿ë
-		/*AllocConsole();
+#ifdef debug
+		AllocConsole();
 		_tfreopen(_T("CONOUT$"), _T("w"), stdout);
 		_tfreopen(_T("CONIN$"), _T("r"), stdin);
-		_tfreopen(_T("CONERR$"), _T("w"), stderr);*/
+		_tfreopen(_T("CONERR$"), _T("w"), stderr);
+#endif
 		SetTimer(hWnd, 1, 100, NULL);
 		hBitBackground = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP3));
 		hBitBackground2 = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP31));
@@ -114,13 +136,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 
 		windbitmap[0] = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP4));
 		windbitmap[1] = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP5));
-
 		HP = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP6));
 		HP_M = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP7));
 		MP = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP8));
 		MP_M = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP9));
 		power_gage[0] = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP10));
 		power_gage[1] = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP11));
+
 		bullet_image = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP2));
 		bullet_image_mask = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP12));
 		font = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP27));
@@ -323,8 +345,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 		p.y = HIWORD(lParam);
 		cout << p.x << ", " << p.y << endl;
 	}
-		break;
-	case WM_RBUTTONDOWN:
 		break;
 	case WM_TIMER: {
 		DWORD currentTime = GetTickCount64();;
@@ -742,4 +762,13 @@ void checkItemCol() {
 	for (int i = itindex.size(); i > 0; i--) {
 		item.erase(item.begin() + (i - 1));
 	}
+}
+
+void setImgs()
+{
+	stage1.setBmp(g_hInst, IDB_BITMAP4, IDB_BITMAP5, 0);
+	//6, 9, 11 is Max
+	stage1.setBmp(g_hInst, IDB_BITMAP7, IDB_BITMAP6, 1);
+	stage1.setBmp(g_hInst, IDB_BITMAP8, IDB_BITMAP9, 2);
+	stage1.setBmp(g_hInst, IDB_BITMAP10, IDB_BITMAP11, 3);
 }

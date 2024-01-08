@@ -60,7 +60,7 @@ public:
 		}
 		if (random == 7) {
 			*wind = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP23));
-			*wind_mask = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP24));
+			*wind_mask = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP24));`
 		}
 		if (random == 8) {
 			*wind = LoadBitmap(g_hInst, MAKEINTRESOURCE(IDB_BITMAP25));
